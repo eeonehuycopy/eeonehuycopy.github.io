@@ -1,1 +1,53 @@
-eeoneguy
+
+<html><head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>---</title>
+    <meta name="description" content="---">
+    <!-- index -->
+    <link href="style.css?070" rel="stylesheet" type="text/css">
+    <script src="examples.js?70" type="text/javascript" charset="utf-8"></script>
+    <script src="script.js?70" type="text/javascript" charset="utf-8"></script>
+    <!-- vk api -->
+    <script src="https://vk.com/js/api/xd_connection.js?3" type="text/javascript"></script>
+    <!-- ace vk -->
+    <script src="https://vk.com/js/ace/ace.js?2" type="text/javascript" charset="utf-8"></script>
+    <link href="https://vk.com/css/al/apps_edit.css?18504450204" rel="stylesheet" type="text/css">
+    <!-- notifications -->
+    <script src="https://vkscripts.ru/js/kalert.js" type="text/javascript" charset="utf-8"></script>
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+</head><body class="apps_edit_cont_row">
+    <div id="placeholder">
+        <h1>Загрузка...</h1>
+    </div>
+    <div id="head" class="section">
+        <div class="label">Тип: </div>
+
+        <div id="type" class="select">
+            <div value="text" title="Text">Текст</div>
+            <div value="list" title="List">Список</div>
+            <div value="list" name="compact_list" title="Compact List">Компактный список</div>
+            <div value="table" title="Table">Таблица</div>
+            <div value="match" title="Match">Матч</div>
+            <div value="matches" title="Matches">Матчи</div>
+            <div value="cover_list" title="Cover List" style="display: none;">Постеры</div>
+            <div value="tiles" title="Tiles">Тайлы</div>
+            <div value="user_welcome" name="text">Приветствие юзера</div>
+            <div value="user_welcome1" name="compact_list" class="active">Подписчики</div>
+            <div value="text_api_group" name="text">groups.getById</div>
+            <span id="user_scripts"></span>
+        </div>
+
+        <button onclick="saveCode()">Сохранить</button>
+        <a class="button" target="_blank" href="https://vk.com/dev/apps_widgets">Справка</a>
+        <button id="toggle_editor" onclick="toggleEditor();" style="float: right;display: none;">Визуальный редактор</button>
+    </div>
+
+    <iframe xsrc="widget.html" id="editor_visual" class="page"></iframe>
+    <div id="editor_code" class="ace-tm page active"></div>
+    <div id="footer" class="section">
+        <button onclick="saveWidget()">Посмотреть и сохранить</button>
+        <button onclick="showResponse()">Посмотреть ответ</button>
+    </div>
+</body></html>
