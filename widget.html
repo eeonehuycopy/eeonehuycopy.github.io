@@ -1,0 +1,134 @@
+
+<html><head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>---</title>
+    <meta name="description" content="---">
+    <!-- vk css -->
+    <link href="https://vk.com/css/al/module.css" rel="stylesheet" type="text/css">
+    <link href="https://vk.com/css/al/common.css" rel="stylesheet" type="text/css">
+    <link href="https://vk.com/css/al/apps.css" rel="stylesheet" type="text/css">
+    <link href="https://vk.com/css/al/groups.css" rel="stylesheet" type="text/css">
+
+    <link href="editor.css" rel="stylesheet" type="text/css">
+    <script src="editor.js?54" type="text/javascript" charset="utf-8"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <script id="template_add_block" type="text/template">
+        <a class="flat_button secondary add_section_button">Добавить блок</a>
+    </script>
+    <script id="template_text" type="text/template">
+        <div class="app_widget_text_content">
+            <span class="editable" path="text">Текст</span>
+        </div>
+        <div class="app_widget_text_descr editable" path="descr">Описание</div>
+    </script>
+    <script id="template_compact_list" type="text/template">
+        <div class="clear_fix app_widget_list_row editable section" path="row[0]">
+            <a class="flat_button app_widget_list_side_button">
+                <span class="link" path=".button">Открыть</span>
+            </a>
+            <div class="app_widget_list_content">
+                <div class="app_widget_list_content_outer">
+                    <div class="app_widget_list_content_inner">
+                        <a class="app_widget_list_title app_widget_linked">
+                            <span class="link" path=".title" required>Заголовок блока</span>
+                        </a>
+                        <span class="app_widget_list_info" path=".descr">Описание</span>
+                        <div class="app_widget_list_info address" path=".address">Адрес</div>
+                        <div class="app_widget_list_info time" path=".time">Время</div>
+                        <div class="app_widget_list_text" path=".text">Текст</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </script>
+    <script id="template_list" type="text/template">
+        <div class="clear_fix app_widget_list_row">
+            <div class="app_widget_list_content">
+                <div class="app_widget_list_content_outer">
+                    <div class="app_widget_list_content_inner editable section" path="row[0]">
+                        <a class="app_widget_list_title app_widget_linked">
+                            <span class="link" path=".title">Заголовок блока</span>
+                        </a>
+                        <span class="app_widget_list_info" path=".descr">Описание</span>
+                        <div class="app_widget_list_info address" path=".address">Адрес</div>
+                        <div class="app_widget_list_info time" path=".time">Время</div>
+                        <div class="app_widget_list_text" path=".text">Текст</div>
+                        <a class="flat_button app_widget_list_button link" path=".button">Открыть</a> <!-- list -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </script>
+    <script id="template_table" type="text/template">
+        <center><h1>Не готово, используйте текстовый редактор</h1></center>
+        <table class="app_widget_table" style="font-size intherit; opacity: 0.2; display: none;">
+            <tbody>
+                <tr class="editable section" path="head">
+                    <th class="app_widget_table_th align">Заголовок #1</th>
+                    <th class="app_widget_table_th align ta_r">Заголовок #2</th>
+                </tr>
+                <tr class="editable section" path="body[0]">
+                    <td class="app_widget_table_td link align" path="[0]">Содержимое 1x1</td>
+                    <td class="app_widget_table_td link align ta_r" path="[0]">Содержимое 1x2</td>
+                </tr>
+            </tbody>
+        </table>
+    </script>
+    <script id="template_match" type="text/template">
+        <div class="clear_fix app_widget_match app_widget_stated app_widget_descripted" path="match">
+            <div class="app_widget_match_team_a editable section" path=".team_a" style="z-index: 2">
+                <div class="app_widget_match_team_name" path=".name">Команда A</div>
+                <div class="app_widget_match_descr" path=".descr">Описание команды A</div>
+            </div>
+            <div class="app_widget_match_team_b editable section" path=".team_b" style="z-index: 2">
+                <div class="app_widget_match_team_name" path=".name">Команда B</div>
+                <div class="app_widget_match_descr" path=".descr">Описание команды B</div>
+            </div>
+            <div class="app_widget_match_score editable section" path=".score">
+                <span path=".team_a">1</span>:<span path=".team_b">2</span>
+            </div>
+            <div class="app_widget_match_state editable" path=".state">Состояние</div>
+        </div>
+        <div class="app_widget_match_team_a_events" path=".events.team_a">
+            <div class="app_widget_match_event editable section" path="[0]">
+                <span class="app_widget_match_event_minute" path=".minute">3'</span><span path=".event">Событие команды A</span>
+            </div>
+        </div>
+        <div class="app_widget_match_team_b_events section" path=".events.team_b">
+            <div class="app_widget_match_event editable" path="[0]">
+                <span class="app_widget_match_event_minute" path=".minute">4'</span><span path=".event">Событие команды B</span>
+            </div>
+        </div>
+    </script>
+</head><body>
+    <div id="box" onclick="!box_window.contains(event.target) && box.close();" style="display: none;">
+        <div class="box_layout" style="max-width: 500px; margin: auto;" id="box_window">
+            <div class="box_title_wrap">
+                <div class="box_x_button" onclick="box.close();"></div>
+                <div class="box_title">Редактирование</div>
+            </div>
+            <div class="box_body groups_create_box" id="box_body">
+            </div>
+            <div class="box_controls_wrap">
+                <div class="box_controls">
+                    <button class="flat_button fl_r" onclick="save(event);">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="apps_app_widget_preview_box_content page_block wide_column" id="widget">
+        <div class="module clear _module">
+            <a class="module_header editable" id="widget_header">
+              <div class="header_top clear_fix">
+                <span class="header_label fl_l link" path="title" required>Заголовок виджета</span>
+                <span class="header_count fl_l" path="title_counter">1</span>
+              </div>
+            </a>
+            <div class="module_body clear_fix" id="widget_body"></div>
+            <a class="flat_button secondary ui_load_more_btn _ui_load_more_btn with_arrow editable" id="widget_more">
+                <span class="ui_load_more_btn_label link" path="more">Дополнительная ссылка</span>
+            </a>
+        </div>
+    </div>
+</body></html>
