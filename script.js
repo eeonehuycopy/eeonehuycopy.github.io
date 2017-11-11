@@ -193,14 +193,14 @@ function showIndex() {
     }, function(r) {
         var f = document.createDocumentFragment();
         f.appendChild(ce("a.h1", {
-            href: "https://vk.com/add_community_app?aid=6232540",
+            href: "https://vk.com/add_community_app?aid=6253668",
             textContent: lang.install_app,
             target: "_blank"
         }));
         f.appendChild(ce("h1", lang.select_group));
         r.response.items.map(function(g) {
             f.appendChild(ce("a.button", {
-                href: "https://vk.com/app6232540_-" + g.id,
+                href: "https://vk.com/app6253668_-" + g.id,
                 textContent: g.name,
                 target: "_blank"
             }));
