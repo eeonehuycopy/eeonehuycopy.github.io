@@ -195,6 +195,27 @@ var templates = {
             }]
         };
     },
+     donation: function() {
+       return {
+    "title": "Заголовок виджета",
+    "title_url": "vk.com/title_url", // Ссылка заголовка
+    "title_counter": 1, // Число в заголовке
+    "text": "Текст",
+    "text_url": "vk.com/text_url",
+    "button_url": "vk.com/button_url",
+    "date": {
+        "start": 1525981346, // нажмите [F10] для получения такого числа
+        "end": 1526991546,
+    },
+    "goal": 1000000, // сумма сбора
+    "funded": 1000, // собранная сумма
+    "backers": 1000, // число пожертвовавших
+    "currency": "RUB", // USD, UAH, BYR, EUR, MDL, AZN, GEL, AMD, ILS, GBP, TMT, BYN, KZS, KZT
+    "more": "Текст дополнительной ссылки",
+    "more_url": "vk.com/more_url", // Дополнительная ссылка
+};
+
+    },
     text_api_group: function() {
         // groups.getById не работает, пробуйте другой пример
         var g = API.groups.getById({
