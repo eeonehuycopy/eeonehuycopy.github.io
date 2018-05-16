@@ -196,7 +196,7 @@ var templates = {
         };
     },
      donation: function() {
-       return {
+   return {
     "title": "Заголовок виджета",
     "title_url": "vk.com/title_url", // Ссылка заголовка
     "title_counter": 1, // Число в заголовке
