@@ -60,7 +60,10 @@ function getWidgetType() {
 }
 
 function saveWidget() {
-    VK.callMethod('showAppWidgetPreviewBox', getWidgetType(), editor.getValue());
+    if(Args.vk_group_id) 
+        vkBridge.send('VKWebAppShowCommunityWidgetPreviewBox', {group_id: parseInt(Args.vk_group_id), type: getWidgetType(), code: editor.getValue()});
+    else
+        VK.callMethod('showAppWidgetPreviewBox', getWidgetType(), editor.getValue());
 }
 function showResponse() {
     VK.api('execute', {
