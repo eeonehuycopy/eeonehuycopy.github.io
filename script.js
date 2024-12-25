@@ -65,7 +65,7 @@ function saveWidget() {
 function showResponse() {
     VK.api('execute', {
         type: getWidgetType(),
-        uid: Args.user_id,
+        uid: Args.user_id ? Args.user_id : Args.vk_user_id,
         code: editor.getValue(),
     }, function (r) {
         alert(JSON.stringify(r, null, "\t"));
@@ -219,7 +219,7 @@ window.addEventListener("load", function() {
                 type: "error"
             });
         });
-        if (!Args.hasOwnProperty("group_id")) return showIndex();
+        if (!Args.hasOwnProperty("group_id") && !Args.hasOwnProperty("vk_group_id")) return showIndex();
         loadUserScripts();
         document.getElementById('placeholder').style.display = "none";
         InitAce();
